@@ -45,8 +45,120 @@
             <h1>Dashboard</h1>
 
             <p class="dashboard-message">
-                Dashboard will be added in the next feature.
-            </p>
+        Overview of your CRM activity.
+    </p>
+
+    <!-- =========================
+         Quick Stats
+    ========================== -->
+
+    <div class="stats-container">
+
+        <!-- Total Contacts -->
+        <div class="stat-card">
+            <h3>Total Contacts</h3>
+            <p id="totalContacts">0</p>
+        </div>
+
+        <!-- Leads -->
+        <div class="stat-card">
+            <h3>Leads</h3>
+            <p id="totalLeads">0</p>
+        </div>
+
+        <!-- Clients -->
+        <div class="stat-card">
+            <h3>Clients</h3>
+            <p id="totalClients">0</p>
+        </div>
+
+        <!-- Added This Week -->
+        <div class="stat-card">
+            <h3>Added This Week</h3>
+            <p id="contactsThisWeek">0</p>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         Dashboard Content
+    ========================== -->
+
+    <div class="dashboard-grid">
+
+        <!-- Contacts by Category -->
+        <section class="dashboard-card">
+
+            <h2>Contacts by Category</h2>
+
+            <div class="chart">
+
+                <div class="chart-row">
+                    <span>Lead</span>
+
+                    <div class="bar-container">
+                        <div
+                            id="leadBar"
+                            class="bar lead-bar"
+                        ></div>
+                    </div>
+
+                    <span id="leadCount">0</span>
+                </div>
+
+
+                <div class="chart-row">
+                    <span>Customer</span>
+
+                    <div class="bar-container">
+                        <div
+                            id="customerBar"
+                            class="bar customer-bar"
+                        ></div>
+                    </div>
+
+                    <span id="customerCount">0</span>
+                </div>
+
+
+                <div class="chart-row">
+                    <span>Prospect</span>
+
+                    <div class="bar-container">
+                        <div
+                            id="prospectBar"
+                            class="bar prospect-bar"
+                        ></div>
+                    </div>
+
+                    <span id="prospectCount">0</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Recent Activity
+        ========================== -->
+
+        <section class="dashboard-card">
+
+            <h2>Recent Activity</h2>
+
+            <div id="recentActivity">
+
+                <p class="empty-activity">
+                    No recent activity.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
 
         </section>
 
