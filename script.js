@@ -221,6 +221,54 @@ contactForm.addEventListener("submit", function (event) {
     // Create Contact
     // =========================
 
+    // =========================
+    // Add or Update Contact
+    // =========================
+
+const editingId =
+    contactForm.dataset.editingId;
+
+
+if (editingId) {
+
+    // =========================
+    // Update Existing Contact
+    // =========================
+
+    const contactIndex =
+        contacts.findIndex(function (contact) {
+
+            return contact.id === Number(editingId);
+
+        });
+
+
+    if (contactIndex !== -1) {
+
+        contacts[contactIndex].name = name;
+
+        contacts[contactIndex].phone = phone;
+
+        contacts[contactIndex].email = email;
+
+        contacts[contactIndex].company = company;
+
+        contacts[contactIndex].category = category;
+
+    }
+
+
+    // Remove editing mode
+
+    delete contactForm.dataset.editingId;
+
+
+} else {
+
+    // =========================
+    // Create New Contact
+    // =========================
+
     const newContact = {
 
         id: Date.now(),
@@ -244,9 +292,9 @@ contactForm.addEventListener("submit", function (event) {
     };
 
 
-    // Add contact
-
     contacts.push(newContact);
+
+}
 
 
     // Save contact
@@ -262,6 +310,13 @@ contactForm.addEventListener("submit", function (event) {
     // Clear form
 
     contactForm.reset();
+
+    // Change button back
+
+    const submitButton =
+        contactForm.querySelector("button[type='submit']");
+
+    submitButton.textContent = "Add Contact";
 
     // Update Dashboard
 
@@ -363,12 +418,168 @@ function renderContacts() {
                 ${contact.stage}
             </p>
 
+
+
+            <div class="contact-actions">
+
+        <button
+            class="edit-btn"
+            onclick="editContact(${contact.id})"
+        >
+            Edit
+        </button>
+
+        <button
+            class="delete-btn"
+            onclick="deleteContact(${contact.id})"
+        >
+            Delete
+        </button>
+
+    </div>
+
         `;
 
 
         contactsList.appendChild(contactCard);
 
     });
+
+}
+
+
+// =========================
+// Edit Contact
+// =========================
+
+function editContact(contactId) {
+
+    const contact = contacts.find(function (contact) {
+
+        return contact.id === contactId;
+
+    });
+
+
+    if (!contact) {
+
+        return;
+
+    }
+
+
+    // Put existing data into form
+
+    document.getElementById("name").value =
+        contact.name;
+
+    document.getElementById("phone").value =
+        contact.phone;
+
+    document.getElementById("email").value =
+        contact.email;
+
+    document.getElementById("company").value =
+        contact.company;
+
+    document.getElementById("category").value =
+        contact.category;
+
+
+    // Remove old contact
+
+    contacts = contacts.filter(function (contact) {
+
+        return contact.id !== contactId;
+
+    });
+
+
+    saveContacts();
+
+
+    // Show Contacts page
+
+    showPage(contactsPage);
+
+
+    // Change button text
+
+    const submitButton =
+        contactForm.querySelector("button[type='submit']");
+
+    submitButton.textContent = "Update Contact";
+
+
+    // Store editing ID
+
+    contactForm.dataset.editingId =
+        contactId;
+
+}
+
+
+// =========================
+// Delete Contact
+// =========================
+
+function deleteContact(contactId) {
+
+    const contact =
+        contacts.find(function (contact) {
+
+            return contact.id === contactId;
+
+        });
+
+
+    if (!contact) {
+
+        return;
+
+    }
+
+
+    // =========================
+    // Confirmation
+    // =========================
+
+    const confirmed = confirm(
+        `Are you sure you want to delete ${contact.name}?`
+    );
+
+
+    if (!confirmed) {
+
+        return;
+
+    }
+
+
+    // =========================
+    // Delete Contact
+    // =========================
+
+    contacts = contacts.filter(function (contact) {
+
+        return contact.id !== contactId;
+
+    });
+
+
+    // Save updated contacts
+
+    saveContacts();
+
+
+    // Re-render contacts
+
+    renderContacts();
+
+
+    // Update dashboard
+
+    renderDashboard();
 
 }
 
