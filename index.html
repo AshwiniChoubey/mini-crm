@@ -13,15 +13,243 @@
         <h2>Mini CRM</h2>
 
         <nav>
-            <button>Dashboard</button>
-            <button>Contacts</button>
-            <button>Pipeline</button>
-            <button>Settings</button>
-        </nav>
+
+        <button id="dashboardBtn">
+        Dashboard
+        </button>
+
+        <button id="contactsBtn">
+        Contacts
+        </button>
+
+        <button id="pipelineBtn">
+        Pipeline
+        </button>
+
+        <button id="settingsBtn">
+        Settings
+        </button>
+
+</nav>
     </aside>
+    
 
     <main id="app">
-        <!-- Pages will appear here -->
+       
+            <!-- =========================
+             Dashboard Page
+        ========================== -->
+
+        <section id="dashboardPage">
+
+            <h1>Dashboard</h1>
+
+            <p class="dashboard-message">
+                Dashboard will be added in the next feature.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Contacts Page
+        ========================== -->
+
+        <section id="contactsPage" class="page-hidden">
+
+            <h1>Contacts</h1>
+
+
+            <!-- Add Contact Form -->
+
+            <section class="contact-form-section">
+
+                <h2>Add Contact</h2>
+
+                <form id="contactForm">
+
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter name"
+                        >
+
+                        <small
+                            class="error"
+                            id="nameError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="phone"
+                            placeholder="Enter 10-digit phone number"
+                        >
+
+                        <small
+                            class="error"
+                            id="phoneError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="Enter email"
+                        >
+
+                        <small
+                            class="error"
+                            id="emailError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Company -->
+
+                    <div class="form-group">
+
+                        <label for="company">
+                            Company
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            placeholder="Enter company"
+                        >
+
+                        <small
+                            class="error"
+                            id="companyError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Category -->
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Category
+                        </label>
+
+                        <select id="category">
+
+                            <option value="Lead">
+                                Lead
+                            </option>
+
+                            <option value="Customer">
+                                Customer
+                            </option>
+
+                            <option value="Prospect">
+                                Prospect
+                            </option>
+
+                        </select>
+
+                        <small
+                            class="error"
+                            id="categoryError"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- Submit -->
+
+                    <button type="submit">
+                        Add Contact
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- =========================
+                 Contact List
+            ========================== -->
+
+            <section class="contacts-section">
+
+                <h2>All Contacts</h2>
+
+                <div id="contactsList"></div>
+
+            </section>
+
+        </section>
+
+
+        <!-- =========================
+             Pipeline Page
+        ========================== -->
+
+        <section
+            id="pipelinePage"
+            class="page-hidden"
+        >
+
+            <h1>Pipeline</h1>
+
+            <p>
+                Pipeline module will be added later.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Settings Page
+        ========================== -->
+
+        <section
+            id="settingsPage"
+            class="page-hidden"
+        >
+
+            <h1>Settings</h1>
+
+            <p>
+                Settings module will be added later.
+            </p>
+
+        </section>
+ 
     </main>
 
     <script src="script.js"></script>
