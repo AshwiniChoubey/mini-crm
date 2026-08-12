@@ -26,6 +26,10 @@
         Pipeline
         </button>
 
+        <button id="searchBtn">
+        Search & Filters
+        </button>
+
         <button id="settingsBtn">
         Settings
         </button>
@@ -379,6 +383,52 @@
     </div>
 
         </section>
+
+
+        <!-- =========================
+     Search & Filters Page
+========================== -->
+
+<section
+    id="searchPage"
+    class="page-hidden">
+
+    <h1>Search & Filters</h1>
+
+    <div class="search-toolbar">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by Name or Company"
+        >
+
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Lead">Lead</option>
+            <option value="Customer">Customer</option>
+            <option value="Prospect">Prospect</option>
+        </select>
+
+        <select id="stageFilter">
+            <option value="">All Pipeline Stages</option>
+            <option value="New">New</option>
+            <option value="Contacted">Contacted</option>
+            <option value="Negotiation">Negotiation</option>
+            <option value="Won">Won</option>
+            <option value="Lost">Lost</option>
+        </select>
+
+        <select id="sortContacts">
+            <option value="name">Sort by Name</option>
+            <option value="date">Sort by Date Added</option>
+        </select>
+
+    </div>
+
+    <div id="filteredContactsList"></div>
+
+</section>
 
 
         <!-- =========================
