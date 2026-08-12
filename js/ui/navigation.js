@@ -3,6 +3,7 @@
 // =========================
 import { renderDashboard } from "../modules/dashboard.js";
 import { renderContacts } from "../modules/contacts.js";
+import { renderPipeline } from "../modules/pipeline.js";
 
 const dashboardPage = document.getElementById("dashboardPage");
 const contactsPage = document.getElementById("contactsPage");
@@ -68,6 +69,8 @@ contactsBtn.addEventListener("click", function () {
 pipelineBtn.addEventListener("click", function () {
 
     showPage(pipelinePage);
+
+    renderPipeline();
 
 });
 

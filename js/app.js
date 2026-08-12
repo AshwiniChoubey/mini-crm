@@ -14,6 +14,10 @@ import {
     renderDashboard
 } from "./modules/dashboard.js";
 
+import {
+    renderPipeline
+} from "./modules/pipeline.js";
+
 // IMPORT CONTACTS MODULE TO BIND FORM SUBMIT LISTENER
 import { editContact, deleteContact } from "./modules/contacts.js";
 
@@ -24,5 +28,7 @@ window.deleteContact = deleteContact;
 showPage(dashboardPage);
 
 renderDashboard();
+
+renderPipeline();
 
 initTheme();

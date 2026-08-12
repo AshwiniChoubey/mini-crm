@@ -916,3 +916,83 @@ button:hover {
     }
 
 }
+
+
+/* =========================
+Pipeline Module
+========================= */
+
+.pipeline-board {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 15px 0;
+}
+
+.pipeline-column {
+    flex: 1;
+    min-width: 220px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 15px;
+    box-shadow: var(--shadow);
+}
+
+.pipeline-column h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.stage-list {
+    min-height: 300px;
+}
+
+.lead-card {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+}
+
+.lead-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.lead-card p {
+    font-size: 14px;
+    color: var(--muted-text);
+    margin-bottom: 6px;
+}
+
+.lead-card select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--card);
+    color: var(--text);
+}
+
+
+/* =========================
+Pipeline Responsive
+========================= */
+
+@media (max-width: 900px) {
+
+    .pipeline-board {
+        flex-direction: column;
+    }
+
+    .pipeline-column {
+        width: 100%;
+    }
+
+}
