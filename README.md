@@ -99,6 +99,14 @@ The `feature-styling` branch introduces several UI/UX improvements:
 
 ## Screenshots
 
+![image alt](https://github.com/AshwiniChoubey/mini-crm/blob/73be0acfac5f90a6cc9bf1ebf53606ab98cc8ed8/dashboard1.png.png)
+
+![image alt](https://github.com/AshwiniChoubey/mini-crm/blob/73be0acfac5f90a6cc9bf1ebf53606ab98cc8ed8/dashboard2.png.png)
+
+![image alt](https://github.com/AshwiniChoubey/mini-crm/blob/73be0acfac5f90a6cc9bf1ebf53606ab98cc8ed8/contacts.png.png)
+
+![image alt](https://github.com/AshwiniChoubey/mini-crm/blob/73be0acfac5f90a6cc9bf1ebf53606ab98cc8ed8/pipeline.png.png)
+
 ### Dashboard
 
 Add your dashboard screenshot here:
