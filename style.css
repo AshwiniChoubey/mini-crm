@@ -262,9 +262,9 @@ main h2 {
 ========================= */
 
 .contact-form-section {
-    background-color: #ffffff;
+    background-color: var(--card);
     padding: 25px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 8px;
     max-width: 700px;
     margin-bottom: 30px;
@@ -286,6 +286,7 @@ main h2 {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
+    color: var(--text);
 }
 
 
@@ -293,9 +294,11 @@ main h2 {
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     border-radius: 5px;
     font-size: 14px;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 
@@ -343,29 +346,31 @@ button:hover {
 ========================= */
 
 .contacts-section {
-    background-color: #ffffff;
+    background-color: var(--card);
     padding: 25px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 8px;
 }
 
 
 .contacts-section h2 {
+    color: var(--text);
     font-size: 22px;
     margin-bottom: 20px;
 }
 
 
 .contact-card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 18px;
     margin-bottom: 15px;
-    background-color: #fafafa;
+    background-color: var(--background);
 }
 
 
 .contact-card h3 {
+    color: var(--text);
     margin-bottom: 12px;
     font-size: 18px;
 }
@@ -374,6 +379,7 @@ button:hover {
 .contact-card p {
     margin-bottom: 6px;
     font-size: 14px;
+    color: var(--muted-text);
 }
 
 
@@ -637,7 +643,7 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--border);
 }
 
 
@@ -654,14 +660,14 @@ button:hover {
 .activity-item p {
     margin-top: 5px;
     margin-bottom: 0;
-    color: #777;
+    color: var(--muted-text);
     font-size: 13px;
 }
 
 
 .activity-item span {
     font-size: 12px;
-    color: #888;
+    color: var(--muted-text);
 }
 
 
