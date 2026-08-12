@@ -1171,3 +1171,106 @@ Pipeline Responsive
     }
 
 }
+
+
+
+/* =========================
+   Notes / Activity Log
+========================= */
+
+.notes-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.notes-section h2 {
+    margin-bottom: 10px;
+}
+
+.notes-section p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   Note Form
+========================= */
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note-form textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.note-form textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.note-form button {
+    width: 150px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #4a90e2;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.note-form button:hover {
+    background: #357abd;
+}
+
+/* =========================
+   Notes Timeline
+========================= */
+
+.notes-timeline {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Note */
+
+.note-card {
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background: #f8f9fb;
+    border-radius: 8px;
+}
+
+.note-card .note-date {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.note-card .note-text {
+    color: #333;
+    line-height: 1.5;
+}
+
+.empty-note {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}

@@ -18,6 +18,10 @@ import {
     renderPipeline
 } from "./modules/pipeline.js";
 
+import {
+    renderNotes
+} from "./modules/notes.js";
+
 // IMPORT CONTACTS MODULE TO BIND FORM SUBMIT LISTENER
 import { editContact, deleteContact } from "./modules/contacts.js";
 
@@ -30,5 +34,7 @@ showPage(dashboardPage);
 renderDashboard();
 
 renderPipeline();
+
+renderNotes();
 
 initTheme();

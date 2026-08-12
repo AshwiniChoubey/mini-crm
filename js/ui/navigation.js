@@ -5,10 +5,12 @@ import { renderDashboard } from "../modules/dashboard.js";
 import { renderContacts } from "../modules/contacts.js";
 import { renderPipeline } from "../modules/pipeline.js";
 import { renderSearch } from "../modules/search.js";
+import { renderNotes } from "../modules/notes.js";
 
 const dashboardPage = document.getElementById("dashboardPage");
 const contactsPage = document.getElementById("contactsPage");
 const pipelinePage = document.getElementById("pipelinePage");
+const notesPage = document.getElementById("notesPage");
 const settingsPage = document.getElementById("settingsPage");
 const searchPage = document.getElementById("searchPage");
 
@@ -19,6 +21,7 @@ const searchPage = document.getElementById("searchPage");
 const dashboardBtn = document.getElementById("dashboardBtn");
 const contactsBtn = document.getElementById("contactsBtn");
 const pipelineBtn = document.getElementById("pipelineBtn");
+const notesBtn = document.getElementById("notesBtn");
 const settingsBtn = document.getElementById("settingsBtn");
 const searchBtn = document.getElementById("searchBtn");
 
@@ -31,6 +34,7 @@ export function showPage(page) {
     dashboardPage.classList.add("page-hidden");
     contactsPage.classList.add("page-hidden");
     pipelinePage.classList.add("page-hidden");
+    notesPage.classList.add("page-hidden");
     settingsPage.classList.add("page-hidden");
     searchPage.classList.add("page-hidden");
 
@@ -78,6 +82,19 @@ pipelineBtn.addEventListener("click", function () {
 
 
 // =========================
+// Notes / Activity Log Button
+// =========================
+
+notesBtn.addEventListener("click", function () {
+
+    showPage(notesPage);
+
+    renderNotes();
+
+});
+
+
+// =========================
 // Settings Button
 // =========================
 
@@ -104,6 +121,7 @@ export {
     dashboardPage,
     contactsPage,
     pipelinePage,
+    notesPage,
     settingsPage,
     searchPage
 };
